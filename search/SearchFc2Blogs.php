@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ .'/../lib/AutoLoad.php';
-require_once __DIR__ .'/../vendor/AutoLoad.php';
+require_once __DIR__ ."/../lib/AutoLoad.php";
+require_once __DIR__ ."/../vendor/autoload.php";
 
 /**
  * FC2ブログ検索処理
@@ -18,11 +18,11 @@ if(!empty($_GET)){
     $smarty = new Smarty();
 
     // htmlテンプレートファイルディレクト設定
-    $smarty->template_dir =  $ROOT . '/view';
+    $smarty->template_dir =  $ROOT . '/fc2-rss/view';
     // キャッシュのファイルディレクトリ設定
-    $smarty->compile_dir = $ROOT . '/../Smarty/templates_c';
-    $smarty->cache_dir =   $ROOT . '/../Smarty/cache';
-    $smarty->config_dir =  $ROOT . '/../Smarty/configs';
+    $smarty->compile_dir = $ROOT . '/fc2-rss/Smarty/templates_c';
+    $smarty->cache_dir =   $ROOT . '/fc2-rss/Smarty/cache';
+    $smarty->config_dir =  $ROOT . '/fc2-rss/Smarty/configs';
 
     $smarty->assign("result", $data);
 

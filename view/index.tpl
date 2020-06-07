@@ -7,7 +7,7 @@
 </head>
 
   <body>
-    <form method="get" action="/search/SearchFc2Blogs.php">
+    <form method="get" action="search/SearchFc2Blogs.php">
       <span>日付</span>
         <input type="date" name="entryDate" value="{$result.form.entryDate}" />
       <span>Url</span>

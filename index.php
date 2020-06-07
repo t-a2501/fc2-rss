@@ -1,6 +1,7 @@
 <?php
-
-require_once "vendor/AutoLoad.php";
+ini_set('display_errors', 1);
+ini_set('error_reporting', E_ALL);
+require_once "vendor/autoload.php";
 require_once __DIR__ . "/lib/AutoLoad.php";
 require_once __DIR__ . "/lib/CookieUtil.php";
 
@@ -18,9 +19,9 @@ $smarty = new Smarty();
 // htmlテンプレートファイルディレクト設定
 $smarty->template_dir =  $ROOT . '/view';
 // キャッシュのファイルディレクトリ設定
-$smarty->compile_dir = $ROOT . '/../Smarty/templates_c';
-$smarty->cache_dir =   $ROOT . '/../Smarty/cache';
-$smarty->config_dir =  $ROOT . '/../Smarty/configs';
+$smarty->compile_dir = $ROOT . '/fc2-rss/Smarty/templates_c';
+$smarty->cache_dir =   $ROOT . '/fc2-rss//Smarty/cache';
+$smarty->config_dir =  $ROOT . '/fc2-rss/Smarty/configs';
 
 //クッキーから前回の検索条件を取得する。
 $util = new Lib\CookieUtil();
