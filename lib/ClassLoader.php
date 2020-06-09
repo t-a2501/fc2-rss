@@ -36,12 +36,14 @@ class ClassLoader
         foreach (self::directories() as $directory) {
         //foreach ($this->dirs as $directory) {
             //$file_name = "{$directory}/{$class}.php";
+            //サーバー上げた際に大文字小文字区別するためひとまず無理やり小文字化する
             $file_name = $directory . "/" . str_replace("\\","/",$class) . ".php";
             $file_name = str_replace("Controller/","controller/",$file_name);
             $file_name = str_replace("Lib/","lib/",$file_name);
             $file_name = str_replace("Model/","model/",$file_name);
             $file_name = str_replace("Dto/","dto/",$file_name);
-	    $file_name = str_replace("Core/","core/",$file_name);
+            $file_name = str_replace("Core/","core/",$file_name);
+            
 	    if (is_file($file_name)) {
                 require $file_name;
                 return true;

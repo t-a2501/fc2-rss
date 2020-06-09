@@ -1,16 +1,16 @@
 html {
-    font-size: 52.5%;
+    font-size: 60.5%;
 }
   
 body {
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 
 table{
     border-collapse:collapse;
     margin:0 auto;
     color:#005ab3;
-    font-size: 52.5%;
+    font-size: 63.5%;
 }
 tr:last-child td{
     border-bottom:2px solid #005ab3;

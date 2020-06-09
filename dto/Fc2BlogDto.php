@@ -12,6 +12,8 @@ class Fc2BlogDto extends BaseDto
     private $serverNo = null;
     //エントリーNo
     private $entryNo = null;
+    //サブジェクト
+    private $subject = null;
     //タイトル
     private $title = null;
     //Desctiption
@@ -29,6 +31,7 @@ class Fc2BlogDto extends BaseDto
         $list['userName'] = $this->userName;
         $list['serverNo'] = $this->serverNo;
         $list['entryNo']  = $this->entryNo;
+        $list['subject']    = $this->subject;
         $list['title']    = $this->title;
         $list['description'] = $this->description;
         $list['url'] = $this->url;
@@ -82,6 +85,15 @@ class Fc2BlogDto extends BaseDto
         $this->title = $title;
     }
 
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+    public function setSubject($subject)
+    {
+        $this->subject = $subject;
+    }
     public function getDescription()
     {
         return $this->description;

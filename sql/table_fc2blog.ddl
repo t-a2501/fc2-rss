@@ -8,6 +8,7 @@ CREATE TABLE `fcblogs` (
   `userName` VARCHAR(255) NOT NULL,
   `serverNo` INT UNSIGNED NOT NULL,
   `entryNo` INT UNSIGNED NOT NULL,
+  `subject` varchar(255) NOT NULL,
   `title` TEXT NOT NULL,
   `description` TEXT NOT NULL,
   `url` VARCHAR(2083) NOT NULL,

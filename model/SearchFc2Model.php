@@ -71,6 +71,10 @@ class SearchFc2Model extends BaseModel
             $where[] = ' serverNo = :serverNo ';
             $params['serverNo'] = $condition['serverNo'];
         }
+        
+        //強制的にアダルト除外
+        $where[] = ' subject <> :subject ';
+        $params['subject'] = "アダルト";
 
         return array("where" => $where,"params" => $params);
     }

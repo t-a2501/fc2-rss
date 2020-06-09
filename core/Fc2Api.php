@@ -28,6 +28,7 @@ class Fc2Api
                 $blogData->setServerNo($match[2] === "" ? 0 : (int)$match[2]);
                 $blogData->setEntryNo($match[3]);
                 $blogData->setUrl((string)$item->link);
+                $blogData->setSubject(trim((string)$dc->subject));
                 $blogData->setTitle((string)$item->title);
                 $blogData->setDescription((string)$item->description);
                 $blogData->setEntryDate(date('Y-m-d H:i:s', strtotime($dc->date)));

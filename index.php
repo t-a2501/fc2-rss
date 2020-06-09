@@ -1,6 +1,5 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('error_reporting', E_ALL);
+
 require_once "vendor/autoload.php";
 require_once __DIR__ . "/lib/AutoLoad.php";
 require_once __DIR__ . "/lib/CookieUtil.php";
@@ -36,6 +35,7 @@ $result = array(
     "offset"=>null);
 
 $smarty->assign("result",$result);
+$smarty->assign("searchUrl", '/search/SearchFc2Blogs.php');
 
 $smarty->display('view/index.tpl');
 

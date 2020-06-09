@@ -5,12 +5,13 @@ namespace Model;
 class SaveFc2BlogsModel extends BaseModel
 {
     private static $INSERT_SQL = "INSERT INTO "
-                                ." `fcblogs`(`userName`,`serverNo`,`entryNo`,`title`,`description`,`url`,`entryDate`)"
+                                ." `fcblogs`(`userName`,`serverNo`,`entryNo`,`subject`,`title`,`description`,`url`,`entryDate`)"
                                 ."  VALUES%s "
                                 ."  ON DUPLICATE KEY UPDATE "
                                 ." `title`=VALUES(`title`), "
                                 ." `serverNo`=VALUES(`serverNo`),"
                                 ." `entryNo`=VALUES(`entryNo`),"
+                                ." `subject`=VALUES(`subject`),"
                                 ." `title`=VALUES(`title`),"
                                 ." `description`=VALUES(`description`),"
                                 ." `url`=VALUES(`url`),"
@@ -33,6 +34,7 @@ class SaveFc2BlogsModel extends BaseModel
             $valueParams[":userName{$cnt}"] = $dto['userName'];
             $valueParams[":serverNo{$cnt}"] = $dto['serverNo'];
             $valueParams[":entryNo{$cnt}"] = $dto['entryNo'];
+            $valueParams[":subject{$cnt}"] = $dto['subject'];
             $valueParams[":title{$cnt}"] = $dto['title'];
             $valueParams[":description{$cnt}"] = $dto['description'];
             $valueParams[":url{$cnt}"] = $dto['url'];

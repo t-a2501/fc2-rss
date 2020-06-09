@@ -54,7 +54,7 @@ abstract class BaseModel
             }
 
             $stmt->execute();
-
+            
             return $stmt->fetchAll();
 
         }catch(Exception $e){

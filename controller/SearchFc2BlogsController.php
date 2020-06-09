@@ -19,11 +19,11 @@ class SearchFc2BlogsController extends BaseController
 
         //フォームデータを取得
         $form['entryDate'] = @$_GET['entryDate'];
-        $form['url'] = @$_GET['url'];
-        $form['userName'] = @$_GET['userName'];
-        $form['serverNo'] = @$_GET['serverNo'];
-        $form['limit'] = $_GET['limit'] ? $_GET['limit'] : DEFAULT_LIMIT_COUNT;
-        $form['page'] = $_GET['page'] ? $_GET['page'] : 1;
+        $form['url']       = @$_GET['url'];
+        $form['userName']  = @$_GET['userName'];
+        $form['serverNo']  = @$_GET['serverNo'];
+        $form['limit']     = $_GET['limit'] ? $_GET['limit'] : DEFAULT_LIMIT_COUNT;
+        $form['page']      = $_GET['page'] ? $_GET['page'] : 1;
         // 総件数
         $cnt  = $model->count($form);
         // データ取得
